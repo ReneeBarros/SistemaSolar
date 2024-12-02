@@ -1,4 +1,4 @@
-package br.com.dasare.solarOffGrid.entity.inversor;
+package br.com.dasare.solarOffGrid.entity;
 
 public class Inversor {
 

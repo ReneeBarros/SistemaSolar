@@ -1,9 +1,9 @@
-package br.com.dasare.solarOffGrid.service.request;
+package br.com.dasare.solarOffGrid.dto.request;
 
 public record RequestBaterryBank(
 
     Double totalPowerSistemPerDay,
-    Integer autonomyDay,
+    Double autonomyDay,
     Integer voltagyBatteryBank,
     Double dischargeDepthOfBatteryBank,
     Integer voltagyInInversor,

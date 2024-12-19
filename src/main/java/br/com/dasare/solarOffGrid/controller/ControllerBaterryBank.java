@@ -2,8 +2,8 @@ package br.com.dasare.solarOffGrid.controller;
 
 
 import br.com.dasare.solarOffGrid.service.calculatebattery.battery.CalculateBaterryBank;
-import br.com.dasare.solarOffGrid.service.request.RequestBaterryBank;
-import br.com.dasare.solarOffGrid.service.response.ResponseBaterryBank;
+import br.com.dasare.solarOffGrid.dto.request.RequestBaterryBank;
+import br.com.dasare.solarOffGrid.dto.response.ResponseBaterryBank;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

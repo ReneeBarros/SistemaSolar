@@ -20,9 +20,6 @@ public class SolarPainel {
     Double tempCoefficientofVoc;
     Double tempCoefficientofIsc;
 
-
-
-
     public SolarPainel() {
     }
 

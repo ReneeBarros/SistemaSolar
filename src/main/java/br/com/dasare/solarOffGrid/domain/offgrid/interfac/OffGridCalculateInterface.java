@@ -1,7 +1,7 @@
 package br.com.dasare.solarOffGrid.domain.offgrid.interfac;
 
 
-import br.com.dasare.solarOffGrid.service.request.RequestOffGrid;
+import br.com.dasare.solarOffGrid.dto.request.RequestOffGrid;
 
 import java.util.List;
 
@@ -20,6 +20,6 @@ public interface OffGridCalculateInterface {
 
     Double correctedEnergyDay(Double inversorEficient, Double totalConsumptionEquipmentPerDay);
 
-    Double GeralenergyRequired(Double globalRediment, Double correctedEnergyDay);
+    Double GeralenergyRequired( Double correctedEnergyDay);
 
 }

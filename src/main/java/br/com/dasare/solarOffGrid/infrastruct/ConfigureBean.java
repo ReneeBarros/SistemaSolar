@@ -2,8 +2,10 @@ package br.com.dasare.solarOffGrid.infrastruct;
 
 
 import br.com.dasare.solarOffGrid.domain.offgrid.impl.CaculateBatteryBankImpl;
+import br.com.dasare.solarOffGrid.domain.offgrid.impl.CalculateSolarPainelImpls;
 import br.com.dasare.solarOffGrid.domain.offgrid.impl.OffGridCalculateImpl;
 import br.com.dasare.solarOffGrid.domain.offgrid.interfac.CalculateBatteryBankInterface;
+import br.com.dasare.solarOffGrid.domain.offgrid.interfac.CalculateSolarPainelIntefarce;
 import br.com.dasare.solarOffGrid.domain.offgrid.interfac.OffGridCalculateInterface;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +22,11 @@ public class ConfigureBean {
     @Bean
     CalculateBatteryBankInterface calculateBatteryBankInterface(){
         return new CaculateBatteryBankImpl();
+    }
+
+    @Bean
+    CalculateSolarPainelIntefarce calculateSolarPainelIntefarce(){
+        return new CalculateSolarPainelImpls();
     }
 
 }

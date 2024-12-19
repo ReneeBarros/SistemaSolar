@@ -2,8 +2,8 @@ package br.com.dasare.solarOffGrid.service.calculatebattery.battery;
 
 
 import br.com.dasare.solarOffGrid.domain.offgrid.interfac.CalculateBatteryBankInterface;
-import br.com.dasare.solarOffGrid.service.request.RequestBaterryBank;
-import br.com.dasare.solarOffGrid.service.response.ResponseBaterryBank;
+import br.com.dasare.solarOffGrid.dto.request.RequestBaterryBank;
+import br.com.dasare.solarOffGrid.dto.response.ResponseBaterryBank;
 import org.springframework.stereotype.Service;
 
 @Service

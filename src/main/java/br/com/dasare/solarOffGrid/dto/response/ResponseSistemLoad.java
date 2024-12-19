@@ -1,4 +1,4 @@
-package br.com.dasare.solarOffGrid.service.response;
+package br.com.dasare.solarOffGrid.dto.response;
 
 import java.util.List;
 

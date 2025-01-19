@@ -6,8 +6,7 @@ public record RequestBaterryBank(
     Double autonomyDay,
     Integer voltagyBatteryBank,
     Double dischargeDepthOfBatteryBank,
-    Integer voltagyInInversor,
     Integer voltagyBattery,
-    Integer capacityBateryAH
+    Double capacityBateryAH
 
 ) { }

@@ -17,7 +17,6 @@ public class CalculateSolarPainelImpls implements CalculateSolarPainelIntefarce 
     }
 
     @Override
-    // calcula a amperagem por dia que o arranjo deve fornecer ao sistema
     public Double dailyCurrentByArrangement(Double energyPowerPerDay, Integer voltagyBattryBank) {
         return (energyPowerPerDay / voltagyBattryBank);
     }
@@ -100,7 +99,7 @@ public class CalculateSolarPainelImpls implements CalculateSolarPainelIntefarce 
     @Override
                                                      // vem da placa
     public Double powerPicoOfModuleCorrigida( Double tempCoefficientofPmax, Double TemperatureCalculateWp, Double powerSolarPainel){
-        return (((100 + (-tempCoefficientofPmax * TemperatureCalculateWp))/100) * powerSolarPainel);
+        return (((100 + (tempCoefficientofPmax * TemperatureCalculateWp))/100) * powerSolarPainel);
     }
 
     @Override
@@ -121,7 +120,7 @@ public class CalculateSolarPainelImpls implements CalculateSolarPainelIntefarce 
             Integer TemperatureCalculateVoltagyMaxOpenCircuit,
             Double openCircuitVoltage
     ){
-        return (((100 + (-tempCoefficientofVo * TemperatureCalculateVoltagyMaxOpenCircuit))/100) * openCircuitVoltage);
+        return (((100 + (tempCoefficientofVo * TemperatureCalculateVoltagyMaxOpenCircuit))/100) * openCircuitVoltage);
     }
 
     @Override
@@ -131,8 +130,8 @@ public class CalculateSolarPainelImpls implements CalculateSolarPainelIntefarce 
     }
 
     @Override
-    public Double worstDaySolarPanelCurrent(Double optimumOperatingCurrenteImp,Double irradiacaoSolarPiorCaso){
-        return optimumOperatingCurrenteImp * irradiacaoSolarPiorCaso;
+    public Double worstDaySolarPanelCurrent(Double operatingCurrentImp, Double irradiacaoSolarPiorCaso){
+        return operatingCurrentImp * irradiacaoSolarPiorCaso;
     }
 
     @Override

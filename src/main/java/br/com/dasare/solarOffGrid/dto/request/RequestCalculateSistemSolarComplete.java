@@ -12,7 +12,7 @@ public record RequestCalculateSistemSolarComplete(
         Integer voltagyBatteryBank,
         Double dischargeDepthOfBatteryBank,
         Integer voltagyBattery,
-        Integer capacityBateryAH,
+        Double capacityBateryAH,
         String metodoInstalacao,
         Double temperaturaAmbiente,
         Integer PowerOfPainelModule

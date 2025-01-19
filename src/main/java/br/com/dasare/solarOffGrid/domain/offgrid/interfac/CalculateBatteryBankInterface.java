@@ -5,7 +5,7 @@ public interface CalculateBatteryBankInterface {
     Integer BatteryBankCapacityUseful(Double totalPowerSistemPerDay, Double autonomyDay, Integer voltagyBatteryBank);
     Integer batteryBankCapacityReal(Integer batteryBankCapacityUseful, Double dischargeDepthOfBatteryBank);
     Integer numberOfBatteriesInsires(Integer voltagyInInversor, Integer voltagyBattery);
-    Integer numberOfBatteriesParallel(Integer batteryBankCapacityReal, Integer capacityBateryAH);
-    Integer numberTotalOfBattty(Integer numberOfBatteriesInsires, Integer numberOfBatteriesParallel );
+    double numberOfBatteriesParallel(Integer batteryBankCapacityReal, Double capacityBateryAH);
+    double numberTotalOfBattty(Integer numberOfBatteriesInsires, double numberOfBatteriesParallel );
 
 }

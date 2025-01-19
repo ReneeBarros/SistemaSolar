@@ -11,7 +11,7 @@ public record ResponseSistemSolarComplete(
     Integer numberOfBatteriesInsires,
     Integer numberOfBatteriesParallel,
     Integer numberTotalOfBattty,
-    Integer capacityBateryAH,
+    Double capacityBateryAH,
     Integer PowerOfPainelModule,
     Double powerPicoOfModuleCorrigida,
     Double currentDiariaPorArranjo,

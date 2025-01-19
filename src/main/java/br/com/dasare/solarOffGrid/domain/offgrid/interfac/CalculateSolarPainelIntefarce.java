@@ -18,8 +18,8 @@ public interface CalculateSolarPainelIntefarce {
     Double currentMaxOfshortCircuitCurrentIsc(Double tempCoefficientofIsc,Integer TemperatureCalculateCurrentMax,Double shortCircuitCurrentIsc );
     Double voltagyOpenCircutOfModuleCorrigidaVoc(Double tempCoefficientofVo,Integer TemperatureCalculateVoltagyMaxOpenCircuit,Double openCircuitVoltage);
     Integer quantMoludoSerie(Integer batteryVoltagy, Double optimumOperatingVoltageVmp);
-    Double worstDaySolarPanelCurrent(Double shortCircuitCurrentIsc,Double irradiacaoSolarPiorCaso);
+    Double worstDaySolarPanelCurrent(Double operatingCurrentImp,Double irradiacaoSolarPiorCaso);
     Integer numberSolarPanelsParallel(Double worstDaySolarPanelCurrent, Double calculatedCurrentOfSistem );
-    public Integer numberSolarPanels(Integer numberSolarPanelsParallel, Integer quantMoludoSerie );
+    Integer numberSolarPanels(Integer numberSolarPanelsParallel, Integer quantMoludoSerie );
     Integer chargeControllerCurrentMustSuport ( Double currentMaxOfModuleCorrigida, Integer numberSolarPanelsParallel );
 }

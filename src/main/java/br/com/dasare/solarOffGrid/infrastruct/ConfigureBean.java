@@ -7,6 +7,7 @@ import br.com.dasare.solarOffGrid.domain.offgrid.impl.OffGridCalculateImpl;
 import br.com.dasare.solarOffGrid.domain.offgrid.interfac.CalculateBatteryBankInterface;
 import br.com.dasare.solarOffGrid.domain.offgrid.interfac.CalculateSolarPainelIntefarce;
 import br.com.dasare.solarOffGrid.domain.offgrid.interfac.OffGridCalculateInterface;
+import br.com.dasare.solarOffGrid.domain.offgrid.irradiacao_solar.BuscarIrradicaoSolar;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -28,5 +29,8 @@ public class ConfigureBean {
     CalculateSolarPainelIntefarce calculateSolarPainelIntefarce(){
         return new CalculateSolarPainelImpls();
     }
+
+    @Bean
+    BuscarIrradicaoSolar buscarIrradicaoSolar(){return new BuscarIrradicaoSolar();}
 
 }

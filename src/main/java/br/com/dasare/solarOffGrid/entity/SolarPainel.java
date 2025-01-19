@@ -9,11 +9,14 @@ public class SolarPainel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    String marcaSolarPainel;
+    Double pvModuleEfficiency;
+    String pvType;
     Double openCircuitVoltage;
     Double optimumOperatingVoltageVmp;
     Double shortCircuitCurrentIsc;
     Double optimumOperatingCurrentImp;
-    Double maximumPoweratSTCpmax;
+    Double maximumPoweratStcPmax;
     String operatingTemperature;
     String nominalOperatingCellTemperature;
     Double tempCoefficientofPmax;
@@ -23,17 +26,21 @@ public class SolarPainel {
     public SolarPainel() {
     }
 
-    public SolarPainel(Double openCircuitVoltage,
-                       Double optimumOperatingVoltageVmp, Double shortCircuitCurrentIsc,
-                       Double optimumOperatingCurrentImp, Double maximumPoweratSTCpmax,
-                       String operatingTemperature, String nominalOperatingCellTemperature,
-                       Double tempCoefficientofPmax, Double tempCoefficientofVoc,
-                       Double tempCoefficientofIsc) {
+    public SolarPainel(String marcaSolarPainel,
+                       Double pvModuleEfficiency, String pvType,
+                       Double openCircuitVoltage, Double optimumOperatingVoltageVmp,
+                       Double shortCircuitCurrentIsc, Double optimumOperatingCurrentImp,
+                       Double maximumPoweratStcPmax, String operatingTemperature,
+                       String nominalOperatingCellTemperature, Double tempCoefficientofPmax,
+                       Double tempCoefficientofVoc, Double tempCoefficientofIsc) {
+        this.marcaSolarPainel = marcaSolarPainel;
+        this.pvModuleEfficiency = pvModuleEfficiency;
+        this.pvType = pvType;
         this.openCircuitVoltage = openCircuitVoltage;
         this.optimumOperatingVoltageVmp = optimumOperatingVoltageVmp;
         this.shortCircuitCurrentIsc = shortCircuitCurrentIsc;
         this.optimumOperatingCurrentImp = optimumOperatingCurrentImp;
-        this.maximumPoweratSTCpmax = maximumPoweratSTCpmax;
+        this.maximumPoweratStcPmax = maximumPoweratStcPmax;
         this.operatingTemperature = operatingTemperature;
         this.nominalOperatingCellTemperature = nominalOperatingCellTemperature;
         this.tempCoefficientofPmax = tempCoefficientofPmax;
@@ -43,6 +50,30 @@ public class SolarPainel {
 
     public Long getId() {
         return id;
+    }
+
+    public String getMarcaSolarPainel() {
+        return marcaSolarPainel;
+    }
+
+    public void setMarcaSolarPainel(String marcaSolarPainel) {
+        this.marcaSolarPainel = marcaSolarPainel;
+    }
+
+    public Double getPvModuleEfficiency() {
+        return pvModuleEfficiency;
+    }
+
+    public void setPvModuleEfficiency(Double pvModuleEfficiency) {
+        this.pvModuleEfficiency = pvModuleEfficiency;
+    }
+
+    public String getPvType() {
+        return pvType;
+    }
+
+    public void setPvType(String pvType) {
+        this.pvType = pvType;
     }
 
     public Double getOpenCircuitVoltage() {
@@ -61,8 +92,8 @@ public class SolarPainel {
         return optimumOperatingCurrentImp;
     }
 
-    public Double getMaximumPoweratSTCpmax() {
-        return maximumPoweratSTCpmax;
+    public Double getMaximumPoweratStcPmax() {
+        return maximumPoweratStcPmax;
     }
 
     public String getOperatingTemperature() {
@@ -101,8 +132,8 @@ public class SolarPainel {
         this.optimumOperatingCurrentImp = optimumOperatingCurrentImp;
     }
 
-    public void setMaximumPoweratSTCpmax(Double maximumPoweratSTCpmax) {
-        this.maximumPoweratSTCpmax = maximumPoweratSTCpmax;
+    public void setMaximumPoweratStcPmax(Double maximumPoweratStcPmax) {
+        this.maximumPoweratStcPmax = maximumPoweratStcPmax;
     }
 
     public void setOperatingTemperature(String operatingTemperature) {

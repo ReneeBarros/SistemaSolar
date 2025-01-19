@@ -19,9 +19,9 @@ public class CalculateBaterryBank {
     public ResponseBaterryBank baterryBank(RequestBaterryBank request){
         Integer bbcu = baterry.BatteryBankCapacityUseful(request.totalPowerSistemPerDay(), request.autonomyDay(), request.voltagyBatteryBank());
         Integer bbcr = baterry.batteryBankCapacityReal(bbcu, request.dischargeDepthOfBatteryBank());
-        Integer nbs = baterry.numberOfBatteriesInsires(request.voltagyInInversor(), request.voltagyBattery());
-        Integer nbp = baterry.numberOfBatteriesParallel(bbcr, request.capacityBateryAH());
-        Integer ntb = baterry.numberTotalOfBattty(nbs,nbp);
+        Integer nbs = baterry.numberOfBatteriesInsires(request.voltagyBatteryBank(), request.voltagyBattery());
+        double nbp = Math.ceil(baterry.numberOfBatteriesParallel(bbcr, request.capacityBateryAH()));
+        double ntb = Math.ceil(baterry.numberTotalOfBattty(nbs,nbp));
         return new ResponseBaterryBank(
                 bbcu,bbcr,nbs,nbp,ntb
         );

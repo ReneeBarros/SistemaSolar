@@ -5,6 +5,6 @@ public record ResponseBaterryBank(
         Integer BatteryBankCapacityUseful,
         Integer batteryBankCapacityReal,
         Integer numberOfBatteriesInsires,
-        Integer numberOfBatteriesParallel,
-        Integer numberTotalOfBattty
+        Double numberOfBatteriesParallel,
+        Double numberTotalOfBattty
 ) { }

@@ -31,4 +31,13 @@ public class InversorOngridService {
        return new InversorOnGridMapper().listOfInversorToListOfResponseInversor(repository.findAll()) ;
 
     }
+
+    public Double MininuinvesorPower(Double totalLoad) {
+        return totalLoad * 1.43 ;
+    }
+
+    public Double MaxinvesorPower(Double totalLoad) {
+        return totalLoad * 2.0;
+    }
+
 }

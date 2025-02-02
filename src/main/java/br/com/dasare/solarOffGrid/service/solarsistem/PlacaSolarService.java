@@ -14,7 +14,9 @@ import br.com.dasare.solarOffGrid.repository.SolarPanelRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class PlacaSolarService {
@@ -44,6 +46,8 @@ public class PlacaSolarService {
     }
 
     public ResponsePlacaSolarEntity bringByPower(Double power){
+
+
         return new MapperSolarPainel().placaSolarEntityToResponsePlacaSolar(repository.findSolarPainelByPower(power).get());
     }
 
@@ -81,6 +85,22 @@ public class PlacaSolarService {
                 placaSolares
         );
     }
+
+    public Map<Double,Double> calcularPlacarSolarSimples(Double potenciaDoSistema){
+
+        List<ResponsePlacaSolarEntity> placaSolar = bringAll();
+        Map<Double,Double> placaSolares = new HashMap<>();
+
+            placaSolar.forEach(it -> placaSolares.put(
+
+                Math.ceil(it.maximumPoweratSTCpmax()),
+                Math.ceil(potenciaDoSistema /it.maximumPoweratSTCpmax())));
+
+        return placaSolares;
+
+    }
+
+
 
    /* public ResponseSistemYield sistemYield(RequestSolarSistemYield request){
 

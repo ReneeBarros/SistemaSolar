@@ -33,7 +33,7 @@ public class OffGridCalculateImpl implements OffGridCalculateInterface {
     }
 
     @Override
-    // gera o calculo total da carga instalada multiplicando todas as cargas fornecidas pelo cliente
+    // gera o calculo total da carga instalada somando todas as cargas fornecidas pelo cliente
     public Double totalLoad(List<Double> load) {
         Optional<Double> totalLoadResult = load.stream().reduce(Double::sum);
         return totalLoadResult.get();

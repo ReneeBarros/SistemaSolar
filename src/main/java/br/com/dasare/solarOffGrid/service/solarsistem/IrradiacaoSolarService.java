@@ -27,7 +27,7 @@ public class IrradiacaoSolarService {
     }
 
     public ResponseIrradiacaoSolar buscarIrradiacaoSolarByLocation(String cidade){
-         LocalizacaoCidade location = cidadeRepository.findInversorByCidade(cidade).get();
+         LocalizacaoCidade location = cidadeRepository.findLocationByCidade(cidade.toUpperCase()).get();
 
         List<IrradiacaoSolar> logitude = repository.findAll();
        // IrradiacaoSolar coodenada = new BuscarIrradicaoSolar().encontrarInrradiacao(location, logitude);

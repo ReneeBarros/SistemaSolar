@@ -1,7 +1,6 @@
 package br.com.dasare.solarOffGrid.repository;
 
 
-import br.com.dasare.solarOffGrid.entity.InversorOngrid;
 import br.com.dasare.solarOffGrid.entity.LocalizacaoCidade;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -15,7 +14,7 @@ public interface LocalizacaoCidadeRepository extends JpaRepository<LocalizacaoCi
 
 
     @Query("SELECT m FROM LocalizacaoCidade m WHERE m.munUf = ?1")
-    Optional<LocalizacaoCidade> findInversorByCidade(@Param("cidade") String cidade);
+    Optional<LocalizacaoCidade> findLocationByCidade(@Param("cidade") String cidade);
 
 
 }
